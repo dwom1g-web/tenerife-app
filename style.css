@@ -34,6 +34,9 @@ html, body {
   color: white;
 
   position: relative;
+
+  /* 🔥 THIS REMOVES THE STRAIGHT LINE */
+  clip-path: ellipse(120% 100% at 50% 0%);
 }
 
 /* DARK OVERLAY */
@@ -52,20 +55,6 @@ html, body {
 .hero-text {
   position: relative;
   z-index: 2;
-}
-
-/* 🔥 BIG SMOOTH CURVE (LIKE CANVA) */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: -80px; /* MORE SPACE */
-  width: 100%;
-  height: 140px;
-
-  background: #f7f7f7;
-
-  border-top-left-radius: 60% 100%;
-  border-top-right-radius: 60% 100%;
 }
 
 /* CATEGORIES */
