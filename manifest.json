@@ -1,7 +1,7 @@
 {
   "name": "Tenerife App",
   "short_name": "Tenerife",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#f7f7f7",
   "theme_color": "#f7f7f7",
