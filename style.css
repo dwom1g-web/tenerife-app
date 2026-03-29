@@ -1,160 +1,90 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-/* FULLSCREEN */
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f7f7f7;
-}
+  <!-- FULLSCREEN MOBILE FIX -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-/* REMOVE CENTERING */
-body {
-  display: block;
-}
+  <!-- iOS APP MODE -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tenerife">
 
-/* APP FULL WIDTH */
-.app {
-  width: 100%;
-  min-height: 100vh;
-  background: #f7f7f7;
-  padding-bottom: 100px;
-}
+  <!-- ICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon.png">
 
-/* HERO WITH YOUR IMAGE */
-.hero {
-  height: 320px;
+  <title>Tenerife App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  background-image: url('hero.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+<body>
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+  <div class="app">
 
-  position: relative;
-  z-index: 1;
-}
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Tenerife</h1>
+        <p>Explore the island with me</p>
+      </div>
+    </div>
 
-/* OPTIONAL DARK OVERLAY (premium look) */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-}
+    <!-- CATEGORIES -->
+    <div class="categories">
 
-/* HERO TEXT ABOVE OVERLAY */
-.hero-text {
-  position: relative;
-  z-index: 2;
-}
+      <div class="category">
+        <span>📍</span>
+        <p>Plan</p>
+      </div>
 
-.hero-text h1 {
-  font-size: 28px;
-  font-weight: bold;
-}
+      <div class="category">
+        <span>🍔</span>
+        <p>Food & Drink</p>
+      </div>
 
-.hero-text p {
-  margin-top: 10px;
-  font-size: 16px;
-}
+      <div class="category">
+        <span>🥾</span>
+        <p>Excursions</p>
+      </div>
 
-/* CURVE */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  width: 100%;
-  height: 40px;
-  background: #f7f7f7;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  z-index: 0;
-}
+      <div class="category">
+        <span>🗺️</span>
+        <p>Map</p>
+      </div>
 
-/* CATEGORIES */
-.categories {
-  display: flex;
-  justify-content: space-around;
-  margin-top: -40px;
-  padding: 15px;
-  background: #fff;
-  border-radius: 20px;
-  margin-left: 16px;
-  margin-right: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    </div>
 
-  position: relative;
-  z-index: 10;
-}
+    <!-- SECTION -->
+    <h2 class="section-title">Trending spots</h2>
 
-.category {
-  text-align: center;
-}
+    <!-- CARDS -->
+    <div class="cards">
 
-/* EMOJIS */
-.category span {
-  font-size: 26px;
-  display: block;
-  margin-bottom: 5px;
-}
+      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+        <span>Hiking</span>
+      </div>
 
-.category p {
-  font-size: 12px;
-}
+      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff')">
+        <span>Experiences</span>
+      </div>
 
-/* SECTION */
-.section-title {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 20px 16px;
-}
+      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+        <span>Parks</span>
+      </div>
 
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  padding: 0 16px;
-}
+      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+        <span>Natural Beauty</span>
+      </div>
 
-.card {
-  height: 120px;
-  border-radius: 16px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 10px;
-  color: white;
-  font-weight: bold;
-}
+    </div>
 
-/* FLOAT BUTTON */
-.fab {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background: #ff5a5f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+  </div>
+
+  <!-- FLOAT BUTTON -->
+  <div class="fab">+</div>
+
+</body>
+</html>
