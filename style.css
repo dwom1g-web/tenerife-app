@@ -1,90 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- FULLSCREEN MOBILE FIX -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+/* FULLSCREEN + SAFE AREAS */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f7f7;
+}
 
-  <!-- iOS APP MODE -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Tenerife">
+/* APP */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f7f7;
 
-  <!-- ICON -->
-  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: calc(100px + env(safe-area-inset-bottom));
+}
 
-  <title>Tenerife App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+/* HERO */
+.hero {
+  height: 340px;
+  background: url('hero.jpg') center/cover no-repeat;
 
-<body>
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 
-  <div class="app">
+  position: relative;
+}
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Welcome to Tenerife</h1>
-        <p>Explore the island with me</p>
-      </div>
-    </div>
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.6)
+  );
+}
 
-    <!-- CATEGORIES -->
-    <div class="categories">
+/* TEXT */
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
 
-      <div class="category">
-        <span>📍</span>
-        <p>Plan</p>
-      </div>
+.hero-text h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
 
-      <div class="category">
-        <span>🍔</span>
-        <p>Food & Drink</p>
-      </div>
+.hero-text p {
+  margin-top: 10px;
+  font-size: 16px;
+}
 
-      <div class="category">
-        <span>🥾</span>
-        <p>Excursions</p>
-      </div>
+/* WHITE SECTION START */
+.app::after {
+  content: "";
+  display: block;
+  margin-top: -20px;
+  height: 20px;
+  background: #f7f7f7;
+}
 
-      <div class="category">
-        <span>🗺️</span>
-        <p>Map</p>
-      </div>
+/* CATEGORIES (NO OVERLAP ANYMORE) */
+.categories {
+  display: flex;
+  justify-content: space-around;
 
-    </div>
+  margin-top: 20px; /* FIXED: no negative margin */
+  margin-left: 16px;
+  margin-right: 16px;
 
-    <!-- SECTION -->
-    <h2 class="section-title">Trending spots</h2>
+  padding: 15px;
+  background: #fff;
+  border-radius: 20px;
 
-    <!-- CARDS -->
-    <div class="cards">
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
-        <span>Hiking</span>
-      </div>
+/* CATEGORY */
+.category {
+  text-align: center;
+}
 
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff')">
-        <span>Experiences</span>
-      </div>
+.category span {
+  font-size: 26px;
+  display: block;
+  margin-bottom: 5px;
+}
 
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
-        <span>Parks</span>
-      </div>
+.category p {
+  font-size: 12px;
+}
 
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
-        <span>Natural Beauty</span>
-      </div>
+/* SECTION TITLE */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
 
-    </div>
+  margin-top: 25px;
+  margin-left: 16px;
+  margin-bottom: 10px;
+}
 
-  </div>
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 0 16px;
+  margin-top: 10px; /* push slightly down */
+}
 
-  <!-- FLOAT BUTTON -->
-  <div class="fab">+</div>
+.card {
+  height: 130px;
+  border-radius: 16px;
 
-</body>
-</html>
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+
+  color: white;
+  font-weight: bold;
+}
+
+/* FLOAT BUTTON */
+.fab {
+  position: fixed;
+  bottom: calc(30px + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+
+  background: #ff5a5f;
+  color: white;
+  font-size: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
