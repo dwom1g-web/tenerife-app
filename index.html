@@ -2,22 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- FULLSCREEN -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-  <!-- iOS APP MODE -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Tenerife">
-
-  <!-- ICON (FIXED) -->
-  <link rel="apple-touch-icon" href="icon.png">
-  <link rel="icon" href="icon.png">
-
-  <!-- MANIFEST (IMPORTANT) -->
-  <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Tenerife App</title>
   <link rel="stylesheet" href="style.css">
@@ -25,15 +10,16 @@
 
 <body>
 
-  <div class="app">
-
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Welcome to Tenerife</h1>
-        <p>Explore the island with me</p>
-      </div>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Tenerife</h1>
+      <p>Explore the island with me</p>
     </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
 
     <!-- CATEGORIES -->
     <div class="categories">
@@ -60,28 +46,33 @@
 
     </div>
 
+    <!-- TITLE -->
     <h2 class="section-title">Trending spots</h2>
 
+    <!-- CARDS -->
     <div class="cards">
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+
+      <div class="card" style="background-image: url('hero.jpg')">
         <span>Hiking</span>
       </div>
 
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff')">
+      <div class="card" style="background-image: url('hero.jpg')">
         <span>Experiences</span>
       </div>
 
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+      <div class="card" style="background-image: url('hero.jpg')">
         <span>Parks</span>
       </div>
 
-      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+      <div class="card" style="background-image: url('hero.jpg')">
         <span>Natural Beauty</span>
       </div>
+
     </div>
 
   </div>
 
+  <!-- FLOAT BUTTON -->
   <div class="fab">+</div>
 
 </body>
