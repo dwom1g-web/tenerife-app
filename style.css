@@ -57,12 +57,15 @@ body {
   content: "";
   position: absolute;
   bottom: -1px;
+  left: 0;
+
   width: 100%;
-  height: 140px;
+  height: 100px; /* smaller = cleaner curve */
+
   background: #f7f7f7;
 
-  border-top-left-radius: 60% 100%;
-  border-top-right-radius: 60% 100%;
+  border-top-left-radius: 100% 80px;
+  border-top-right-radius: 100% 80px;
 }
 
 /* CONTENT */
