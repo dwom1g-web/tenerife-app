@@ -13,7 +13,7 @@ body {
 /* HERO */
 .hero {
   height: 420px;
-  background: url("hero.jpg") center/cover no-repeat;
+  background: url("hero2.jpg") center/cover no-repeat;
 
   display: flex;
   align-items: center;
