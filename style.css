@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* FULLSCREEN + SAFE AREAS */
+/* FULLSCREEN */
 html, body {
   width: 100%;
   height: 100%;
@@ -18,15 +18,13 @@ html, body {
 .app {
   width: 100%;
   min-height: 100vh;
-  background: #f7f7f7;
-
   padding-top: env(safe-area-inset-top);
   padding-bottom: calc(100px + env(safe-area-inset-bottom));
 }
 
 /* HERO */
 .hero {
-  height: 340px;
+  height: 360px;
   background: url('hero.jpg') center/cover no-repeat;
 
   display: flex;
@@ -56,31 +54,26 @@ html, body {
   z-index: 2;
 }
 
-.hero-text h1 {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.hero-text p {
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-/* WHITE SECTION START */
-.app::after {
+/* 🔥 BIG SMOOTH CURVE (LIKE CANVA) */
+.hero::after {
   content: "";
-  display: block;
-  margin-top: -20px;
-  height: 20px;
+  position: absolute;
+  bottom: -80px; /* MORE SPACE */
+  width: 100%;
+  height: 140px;
+
   background: #f7f7f7;
+
+  border-top-left-radius: 60% 100%;
+  border-top-right-radius: 60% 100%;
 }
 
-/* CATEGORIES (NO OVERLAP ANYMORE) */
+/* CATEGORIES */
 .categories {
   display: flex;
   justify-content: space-around;
 
-  margin-top: 20px; /* FIXED: no negative margin */
+  margin-top: 80px; /* 🔥 THIS FIXES OVERLAP */
   margin-left: 16px;
   margin-right: 16px;
 
@@ -106,14 +99,11 @@ html, body {
   font-size: 12px;
 }
 
-/* SECTION TITLE */
+/* SECTION */
 .section-title {
   font-size: 22px;
   font-weight: bold;
-
-  margin-top: 25px;
-  margin-left: 16px;
-  margin-bottom: 10px;
+  margin: 30px 16px 10px;
 }
 
 /* CARDS */
@@ -122,13 +112,11 @@ html, body {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   padding: 0 16px;
-  margin-top: 10px; /* push slightly down */
 }
 
 .card {
   height: 130px;
   border-radius: 16px;
-
   background-size: cover;
   background-position: center;
 
