@@ -70,7 +70,7 @@ body {
 
 /* CONTENT */
 .content {
-  margin-top: -60px;
+  margin-top: -40px;
 }
 
 /* CATEGORIES */
@@ -88,7 +88,7 @@ body {
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 
-  transform: translateY(-10px);
+  transform: translateY(-35px);
 }
 
 .category {
