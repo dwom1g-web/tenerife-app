@@ -62,7 +62,7 @@ html, body {
   display: flex;
   justify-content: space-around;
 
-  margin-top: 80px; /* 🔥 THIS FIXES OVERLAP */
+  margin-top: 50px; /* 🔥 was 80px → now tighter */
   margin-left: 16px;
   margin-right: 16px;
 
@@ -71,6 +71,8 @@ html, body {
   border-radius: 20px;
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  transform: translateY(-10px);
 }
 
 /* CATEGORY */
