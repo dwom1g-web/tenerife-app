@@ -3,64 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
   <title>Tenerife App</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="./style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS APP ICON -->
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!-- iOS SETTINGS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- THEME COLOR -->
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
 
   <!-- HERO -->
   <div class="hero">
+    
     <div class="hero-text">
       <h1>Welcome to Tenerife</h1>
       <p>Explore the island with me</p>
     </div>
+
+    <!-- CURVE -->
+    <svg class="curve" viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,140 C360,200 1080,200 1440,140 L1440,200 L0,200 Z" fill="#f5f5f5"></path>
+    </svg>
+
   </div>
 
-  <!-- 🔥 THIS WAS MISSING -->
-  <div class="curve">
-
-    <!-- CATEGORY BAR -->
-    <div class="categories">
-      <div class="category">
-        <span>📍</span>
-        <p>Plan</p>
-      </div>
-      <div class="category">
-        <span>🍔</span>
-        <p>Food & Drink</p>
-      </div>
-      <div class="category">
-        <span>🥾</span>
-        <p>Excursions</p>
-      </div>
-      <div class="category">
-        <span>🗺️</span>
-        <p>Map</p>
-      </div>
+  <!-- CATEGORY BAR -->
+  <div class="categories">
+    <div class="category">
+      <span>📍</span>
+      <p>Plan</p>
     </div>
 
-    <!-- CONTENT -->
-    <div class="content">
+    <div class="category">
+      <span>🍔</span>
+      <p>Food & Drink</p>
+    </div>
 
-      <h2 class="section-title">Trending spots</h2>
+    <div class="category">
+      <span>🥾</span>
+      <p>Excursions</p>
+    </div>
 
-      <div class="cards">
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Hiking</span>
-        </div>
+    <div class="category">
+      <span>🗺️</span>
+      <p>Map</p>
+    </div>
+  </div>
 
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Experiences</span>
-        </div>
+  <!-- CONTENT -->
+  <div class="content">
 
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Parks</span>
-        </div>
+    <h2 class="section-title">Trending spots</h2>
 
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Natural Beauty</span>
-        </div>
+    <div class="cards">
+
+      <div class="card" style="background-image: url('hero2.jpg')">
+        <span>Hiking</span>
+      </div>
+
+      <div class="card" style="background-image: url('hero2.jpg')">
+        <span>Experiences</span>
+      </div>
+
+      <div class="card" style="background-image: url('hero2.jpg')">
+        <span>Parks</span>
+      </div>
+
+      <div class="card" style="background-image: url('hero2.jpg')">
+        <span>Natural Beauty</span>
       </div>
 
     </div>
