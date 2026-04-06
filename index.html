@@ -3,19 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
   <title>Tenerife App</title>
 
-  <link rel="stylesheet" href="./style.css">
-
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json">
-
-  <!-- iOS -->
-  <link rel="apple-touch-icon" href="icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
+  <link rel="stylesheet" href="style.css">
   <meta name="theme-color" content="#f5f5f5">
 </head>
 
@@ -28,15 +18,16 @@
       <p>Explore the island with me</p>
     </div>
 
-    <!-- ✅ IMPROVED CURVE (LESS DEEP) -->
-    <svg class="curve" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,0 Q720,80 1440,0 L1440,100 L0,100 Z" fill="#f5f5f5"></path>
+    <!-- CURVE -->
+    <svg class="curve" viewBox="0 0 1440 160" preserveAspectRatio="none">
+      <path d="M0,0 C360,140 1080,140 1440,0 L1440,160 L0,160 Z" fill="#f5f5f5"></path>
     </svg>
   </div>
 
   <!-- MAIN -->
   <div class="main">
 
+    <!-- CATEGORY BAR -->
     <div class="categories">
       <div class="category">
         <span>📍</span>
@@ -56,27 +47,21 @@
       </div>
     </div>
 
+    <!-- CONTENT -->
     <div class="content">
       <h2 class="section-title">Trending spots</h2>
 
       <div class="cards">
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Hiking</span>
-        </div>
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Experiences</span>
-        </div>
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Parks</span>
-        </div>
-        <div class="card" style="background-image: url('hero2.jpg')">
-          <span>Natural Beauty</span>
-        </div>
+        <div class="card"><span>Hiking</span></div>
+        <div class="card"><span>Experiences</span></div>
+        <div class="card"><span>Parks</span></div>
+        <div class="card"><span>Natural Beauty</span></div>
       </div>
     </div>
 
   </div>
 
+  <!-- FLOAT BUTTON -->
   <div class="fab">+</div>
 
 </body>
