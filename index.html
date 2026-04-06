@@ -5,7 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Tenerife App</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- APP ICON (CRITICAL) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+
+  <!-- Browser icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS FULLSCREEN -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- THEME -->
   <meta name="theme-color" content="#f5f5f5">
 </head>
 
@@ -13,6 +29,8 @@
 
   <!-- HERO -->
   <div class="hero">
+    <div class="hero-overlay"></div>
+
     <div class="hero-text">
       <h1>Welcome to Tenerife</h1>
       <p>Explore the island with me</p>
@@ -29,22 +47,10 @@
 
     <!-- CATEGORY BAR -->
     <div class="categories">
-      <div class="category">
-        <span>📍</span>
-        <p>Plan</p>
-      </div>
-      <div class="category">
-        <span>🍔</span>
-        <p>Food & Drink</p>
-      </div>
-      <div class="category">
-        <span>🥾</span>
-        <p>Excursions</p>
-      </div>
-      <div class="category">
-        <span>🗺️</span>
-        <p>Map</p>
-      </div>
+      <div class="category"><span>📍</span><p>Plan</p></div>
+      <div class="category"><span>🍔</span><p>Food</p></div>
+      <div class="category"><span>🥾</span><p>Trips</p></div>
+      <div class="category"><span>🗺️</span><p>Map</p></div>
     </div>
 
     <!-- CONTENT -->
@@ -61,7 +67,7 @@
 
   </div>
 
-  <!-- FLOAT BUTTON -->
+  <!-- FAB -->
   <div class="fab">+</div>
 
 </body>
